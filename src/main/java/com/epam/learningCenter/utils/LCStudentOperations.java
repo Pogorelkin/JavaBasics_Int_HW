@@ -9,7 +9,7 @@ public interface LCStudentOperations {
 
     String calcExpulsionPossibility(Student student);
 
-    LinkedList<Student> sortMarksByHours(LinkedList<Student>);
+    LinkedList<Student> sortMarksByHours(LinkedList<Student>); //issue
     LinkedList<Student> sortMarksByAverage(LinkedList<Student>);
 
 }
