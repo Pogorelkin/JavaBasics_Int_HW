@@ -1,4 +1,7 @@
+package com.epam.learningCenter;
+
 import java.util.*;
+
 
 public class Student {
     private String firstName;
@@ -41,5 +44,9 @@ public class Student {
 
     public void addCourse(Course course){
         this.courses.add(course);
+    }
+
+    public LinkedList<Course> getCourses() {
+        return courses;
     }
 }

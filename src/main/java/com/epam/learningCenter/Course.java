@@ -1,5 +1,6 @@
-public class Course {
+package com.epam.learningCenter;
 
+public class Course {
     public Course(String name, int hourAmount) {
         this.name = name;
         this.hourAmount = hourAmount;
