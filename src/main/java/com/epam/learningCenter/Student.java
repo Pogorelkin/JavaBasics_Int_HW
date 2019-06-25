@@ -5,13 +5,52 @@ import java.util.*;
 
 public class Student {
     private String firstName;
-    private String getFirstName;
-    private ArrayList<Integer> marks = new ArrayList<Integer>();
-    private LinkedList<Course> courses = new LinkedList<Course>();
+    private String lastName;
+    private String curriculum;
+    private LinkedList<Integer> marks = new LinkedList<>();
+    private LinkedList<Course> courses = new LinkedList<>();
+    private Date start_date;
 
-    public Student(String firstName, String getFirstName) {
+    public Student(String firstName, String lastName) {
         this.firstName = firstName;
-        this.getFirstName = getFirstName;
+        this.lastName = lastName;
+    }
+
+    public Student(String firstName, String lastName, String curriculum, LinkedList<Integer> marks, LinkedList<Course> courses) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.curriculum = curriculum;
+        this.marks = marks;
+        this.courses = courses;
+    }
+
+    public Student(String firstName, String lastName, String curriculum, LinkedList<Integer> marks, LinkedList<Course> courses, Date start_date) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.curriculum = curriculum;
+        this.marks = marks;
+        this.courses = courses;
+        this.start_date = start_date;
+    }
+
+    public String getCurriculum() {
+        return curriculum;
+    }
+
+    public void setCurriculum(String curriculum) {
+        this.curriculum = curriculum;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setCourses(LinkedList<Course> courses) {
+        this.courses = courses;
     }
 
     public String getFirstName() {
@@ -22,19 +61,12 @@ public class Student {
         this.firstName = firstName;
     }
 
-    public String getGetFirstName() {
-        return getFirstName;
-    }
 
-    public void setGetFirstName(String getFirstName) {
-        this.getFirstName = getFirstName;
-    }
-
-    public ArrayList<Integer> getMarks() {
+    public LinkedList<Integer> getMarks() {
         return marks;
     }
 
-    public void setMarks(ArrayList<Integer> marks) {
+    public void setMarks(LinkedList<Integer> marks) {
         this.marks = marks;
     }
 
@@ -52,14 +84,14 @@ public class Student {
 
     public Integer getHours() {
         Integer hrs = 0;
-        Integer marksN = 0;
+
         for (Course obj : this.getCourses()) {
             hrs += obj.getHourAmount();
         }
 
         for (Integer mark : this.getMarks()) {
             if (mark != 0)
-                hrs--;
+                hrs-=8;
         }
 
         return hrs;
@@ -75,6 +107,11 @@ public class Student {
         }
 
         return sum.doubleValue() / marksAmount.doubleValue();
+    }
+
+    @Override
+    public String toString() {
+        return firstName + lastName ;
     }
 }
 

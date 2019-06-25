@@ -5,7 +5,7 @@ import java.util.LinkedList;
 public class LearningCenter {
     private LinkedList<Student> studentList = new LinkedList<Student>();
 
-    public void  addStudent(Student student) {
+    public void addStudent(Student student) {
         this.studentList.add(student);
     }
 
@@ -17,3 +17,4 @@ public class LearningCenter {
         this.studentList = studentList;
     }
 }
+
