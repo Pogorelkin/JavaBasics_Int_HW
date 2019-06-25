@@ -42,11 +42,39 @@ public class Student {
         this.marks.add(mark);
     }
 
-    public void addCourse(Course course){
+    public void addCourse(Course course) {
         this.courses.add(course);
     }
 
     public LinkedList<Course> getCourses() {
         return courses;
     }
+
+    public Integer getHours() {
+        Integer hrs = 0;
+        Integer marksN = 0;
+        for (Course obj : this.getCourses()) {
+            hrs += obj.getHourAmount();
+        }
+
+        for (Integer mark : this.getMarks()) {
+            if (mark != 0)
+                hrs--;
+        }
+
+        return hrs;
+    }
+
+    public double calcAverageMark() {
+        Integer marksAmount = 0;
+        double avg = 0;
+        Integer sum = 0;
+        for (Integer mark : this.getMarks()) {
+            sum += mark;
+            marksAmount++;
+        }
+
+        return sum.doubleValue() / marksAmount.doubleValue();
+    }
 }
+

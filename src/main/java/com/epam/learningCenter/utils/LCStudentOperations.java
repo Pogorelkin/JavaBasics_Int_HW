@@ -1,15 +1,12 @@
 package com.epam.learningCenter.utils;
 
-import com.epam.learningCenter.*;
-import java.util.LinkedList;
+import com.epam.learningCenter.Student;
 
 public interface LCStudentOperations {
-    Integer calcHoursLeft(Student student);
-    double calcAverageMark(Student student);
 
     String calcExpulsionPossibility(Student student);
 
-    LinkedList<Student> sortMarksByHours(LinkedList<Student>); //issue
-    LinkedList<Student> sortMarksByAverage(LinkedList<Student>);
+    //LinkedList<Student> sortStudentsByHours(LinkedList<Student>); //issue - identifier expected
+    //LinkedList<Student> sortStudentsByAverage(LinkedList<Student>);
 
 }
