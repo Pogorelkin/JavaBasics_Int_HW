@@ -1,6 +1,11 @@
-package com.epam.learningCenter;
+package com.epam.learningcenter;
 
-import java.util.*;
+import java.time.LocalDateTime;
+import java.util.LinkedList;
+
+import static java.time.temporal.ChronoUnit.DAYS;
+
+//import static java.time.temporal.ChronoUnit.DAYS;
 
 
 public class Student {
@@ -9,7 +14,8 @@ public class Student {
     private String curriculum;
     private LinkedList<Integer> marks = new LinkedList<>();
     private LinkedList<Course> courses = new LinkedList<>();
-    private Date start_date;
+    //private Date start_date;
+    private LocalDateTime start_date;
 
     public Student(String firstName, String lastName) {
         this.firstName = firstName;
@@ -24,7 +30,7 @@ public class Student {
         this.courses = courses;
     }
 
-    public Student(String firstName, String lastName, String curriculum, LinkedList<Integer> marks, LinkedList<Course> courses, Date start_date) {
+    public Student(String firstName, String lastName, String curriculum, LinkedList<Integer> marks, LinkedList<Course> courses, LocalDateTime start_date) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.curriculum = curriculum;
@@ -94,7 +100,25 @@ public class Student {
                 hrs-=8;
         }
 
+
         return hrs;
+    }
+
+    public Long getCourcesDurationInHours(){
+        Long hrs = new Long(0);
+        for (Course obj : this.getCourses()) {
+            hrs += obj.getHourAmount();
+        }
+
+
+        return hrs;
+    }
+
+    public Long getDaysLeft(){
+       Long daysDifference = DAYS.between(start_date,LocalDateTime.now());
+
+        return daysDifference <= getCourcesDurationInHours()? getCourcesDurationInHours()-daysDifference : 0;
+
     }
 
     public double calcAverageMark() {

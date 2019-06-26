@@ -1,13 +1,13 @@
-package com.epam.learningCenter.utils;
+package com.epam.learningcenter.utils;
 
-import com.epam.learningCenter.Course;
-import com.epam.learningCenter.LearningCenter;
-import com.epam.learningCenter.Student;
+import com.epam.learningcenter.Course;
+import com.epam.learningcenter.LearningCenter;
+import com.epam.learningcenter.Student;
 
 import java.util.Arrays;
 import java.util.LinkedList;
 
-public class demoServiceData implements demoService {
+public class DemoServiceData implements DemoService {
 
 
 
@@ -15,8 +15,8 @@ public class demoServiceData implements demoService {
     public void startDemo() {
         LCStudentOperImpl operations = new LCStudentOperImpl();
         LearningCenter learningCenter = new LearningCenter();
-        LinkedList<Student> studentsList = new LinkedList<Student>();
-        //student Ivanov Ivan
+        LinkedList<Student> studentsList;
+        //input student Ivanov Ivan
         LinkedList<Integer> marks = new LinkedList<>(Arrays.asList(3,4,2,5,3,3));
         LinkedList<Course> courses = new LinkedList<>(Arrays.asList(new Course("Java Servlets", 16),
                                                                     new Course("Struts Framework", 24),
@@ -25,7 +25,7 @@ public class demoServiceData implements demoService {
         learningCenter.addStudent(new Student("Ivan", "Ivanov", "J2EE Developer", marks, courses));
 
 
-        //Petrov Petr
+        //input Petrov Petr
         marks = new LinkedList<>(Arrays.asList(4,5,3,2,3,3,5,5));
         courses = new LinkedList<>(Arrays.asList(new Course("Java technologies review", 8),
                 new Course("JFC/Swing library", 16),
@@ -34,7 +34,7 @@ public class demoServiceData implements demoService {
                 new Course("Common libraries", 44)));
         learningCenter.addStudent(new Student("Petr", "Petrov", "Java Developer", marks, courses));
 
-        //Dmitry Dmitriev
+        //input Dmitry Dmitriev
         marks = new LinkedList<>(Arrays.asList(4,5,5,5));
         courses = new LinkedList<>(Arrays.asList(new Course("Some course1 ", 8),
                 new Course("Some course2", 8),
@@ -48,22 +48,22 @@ public class demoServiceData implements demoService {
             System.out.println("Expulsion possibility: " + operations.calcExpulsionPossibility(student));
             operations.printStudentWithDecision(student);
         }
-        System.out.println("\nSort students by average mark");
-        studentsList = operations.sortStudentsByAverage(learningCenter.getStudentList());
+        System.out.println("\nSort students by average mark:");
+        studentsList = (LinkedList<Student>) operations.sortStudentsByAverage(learningCenter.getStudentList());
         for (Student student: studentsList) {
-            System.out.println(student+"\n");
+            System.out.println(student+" ");
         }
 
-        System.out.println("\nSort students by hours_left amount");
-        studentsList = operations.sortStudentsByHours(learningCenter.getStudentList());
+        System.out.println("\nSort students by hours_left amount:");
+        studentsList = (LinkedList<Student>) operations.sortStudentsByHours(learningCenter.getStudentList());
         for (Student student: studentsList) {
-            System.out.println(student+"\n");
+            System.out.println(student+" ");
         }
 
         System.out.println("\nFilter bad students");
-        studentsList = operations.filterStudentsLosers(learningCenter.getStudentList());
+        studentsList = (LinkedList<Student>) operations.filterStudentsLosers(learningCenter.getStudentList());
         for (Student student: studentsList) {
-            System.out.println(student+"\n");
+            System.out.println(student+" ");
         }
     }
 }

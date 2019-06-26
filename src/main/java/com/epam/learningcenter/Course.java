@@ -1,4 +1,4 @@
-package com.epam.learningCenter;
+package com.epam.learningcenter;
 
 public class Course {
     public Course(String name, int hourAmount) {

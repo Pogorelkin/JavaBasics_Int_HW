@@ -1,6 +1,6 @@
-package com.epam.learningCenter.utils;
+package com.epam.learningcenter.utils;
 
-import com.epam.learningCenter.Student;
+import com.epam.learningcenter.Student;
 
 public interface LCStudentOperations {
 

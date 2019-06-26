@@ -1,4 +1,4 @@
-package com.epam.learningCenter;
+package com.epam.learningcenter;
 
 import java.util.LinkedList;
 

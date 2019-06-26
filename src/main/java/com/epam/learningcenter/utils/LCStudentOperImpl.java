@@ -1,16 +1,15 @@
-package com.epam.learningCenter.utils;
+package com.epam.learningcenter.utils;
 
 
-import com.epam.learningCenter.LearningCenter;
-import com.epam.learningCenter.Student;
+import com.epam.learningcenter.LearningCenter;
+import com.epam.learningcenter.Student;
 
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
+import java.util.List;
 
 public class LCStudentOperImpl {
-    private LearningCenter learningCenter;
-    private Student student;
 
     public LCStudentOperImpl() {
 
@@ -18,11 +17,9 @@ public class LCStudentOperImpl {
 
 
     public LCStudentOperImpl(Student student) {
-        this.student = student;
     }
 
     public LCStudentOperImpl(LearningCenter learningCenter) {
-        this.learningCenter = learningCenter;
     }
 
 
@@ -34,9 +31,9 @@ public class LCStudentOperImpl {
             else { return student.getFirstName() + " is doing well(FeelsGoodMan) " ;}
     }
 
-    public LinkedList<Student> sortStudentsByHours(LinkedList<Student> studentsList) {
-        Comparator<Student> studentComparator = Comparator.comparing(obj -> obj.getHours());
-        Collections.sort(studentsList,studentComparator);
+    public List<Student> sortStudentsByHours(LinkedList<Student> studentsList) {
+        Comparator<Student> studentComparator = Comparator.comparing(Student::getHours);
+        studentsList.sort(studentComparator);
 
 
         return studentsList;
@@ -44,7 +41,7 @@ public class LCStudentOperImpl {
     }
 
 
-    public LinkedList<Student> sortStudentsByAverage(LinkedList<Student> studentsList) {
+    public List<Student> sortStudentsByAverage(LinkedList<Student> studentsList) {
 
         Comparator<Student> studentComparator = Comparator.comparing(obj -> obj.calcAverageMark());
         Collections.sort(studentsList,studentComparator);
@@ -53,7 +50,7 @@ public class LCStudentOperImpl {
         return studentsList;
     }
 
-    public LinkedList<Student> filterStudentsLosers(LinkedList<Student> studentsList){
+    public List<Student> filterStudentsLosers(LinkedList<Student> studentsList){
          LinkedList<Student> studentList = new LinkedList<Student>();
          Integer bestPossibleAvgMark = 0;
          Integer dayBuffer = 0;
@@ -98,14 +95,14 @@ public class LCStudentOperImpl {
                 }
                 bestPossibleAvgMark = bestPossibleAvgMark / dayBuffer;
                 if (bestPossibleAvgMark >=4.5) {decision = "Student can continue the learning.";}
-                    else {decision = "Student has to be kicked(";}
+                    else {decision = "Student has to be kicked";}
             }
             else {decision = "Student has to be kicked(";}
         }
 
-        System.out.println(student.getFirstName() + student.getLastName()
-            + "There is " + student.getHours() + "until end of " + student.getCurriculum()
-                + " learning program. Average mark is " + student.calcAverageMark() + "Sentence:" + decision);
+        System.out.println(String.format("%s %s : There is %s hours until end of %s learning program. Average mark is %.2f Sentence: %s .",
+                student.getFirstName(),student.getLastName(),student.getHours(), student.getCurriculum(), student.calcAverageMark() ,decision));
+
 
 
     }

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61dfa994-8ae3-4bc3-8b2b-ccb9a21bb7d4" name="Default Changelist" comment=" initial Demo service">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/demoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/demoServiceData.java" afterDir="false" />
+    <list default="true" id="61dfa994-8ae3-4bc3-8b2b-ccb9a21bb7d4" name="Default Changelist" comment=" initial">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/LearningCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/LearningCenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/LCStudentOperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/LCStudentOperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/learningcenter/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/LearningCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/learningcenter/LearningCenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/learningcenter/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/LCStudentOperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/learningcenter/utils/LCStudentOperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/LCStudentOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/learningcenter/utils/LCStudentOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/demoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/learningcenter/utils/DemoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/demoServiceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/learningcenter/utils/DemoServiceData.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,7 +25,7 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="14741" />
+    <option name="totalTimeSeconds" value="18141" />
     <option name="idleThresholdMs" value="35000" />
   </component>
   <component name="DefaultGradleProjectSettings">
@@ -34,30 +36,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="221">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/Student.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningcenter/Student.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="113" column="36" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="36" />
+            <state relative-caret-position="405">
+              <caret line="119" column="109" lean-forward="true" selection-start-line="119" selection-start-column="109" selection-end-line="119" selection-end-column="109" />
               <folding>
-                <element signature="e#719#720#0" expanded="true" />
-                <element signature="e#752#753#0" expanded="true" />
-                <element signature="e#804#805#0" expanded="true" />
-                <element signature="e#848#849#0" expanded="true" />
-                <element signature="e#686#687#0" expanded="true" />
-                <element signature="e#717#718#0" expanded="true" />
-                <element signature="e#765#766#0" expanded="true" />
-                <element signature="e#805#806#0" expanded="true" />
-                <element signature="e#477#478#0" expanded="true" />
-                <element signature="e#515#516#0" expanded="true" />
-                <element signature="e#1121#1122#0" expanded="true" />
-                <element signature="e#1151#1152#0" expanded="true" />
+                <element signature="imports" expanded="true" />
                 <element signature="e#2728#2729#0" expanded="true" />
                 <element signature="e#2772#2773#0" expanded="true" />
               </folding>
@@ -66,7 +60,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/Course.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningcenter/Course.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
               <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
@@ -75,7 +69,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/LCStudentOperations.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningcenter/utils/LCStudentOperations.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="8" column="97" selection-start-line="8" selection-start-column="97" selection-end-line="8" selection-end-column="97" />
@@ -83,37 +77,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/LCStudentOperImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="31" column="108" selection-start-line="31" selection-start-column="108" selection-end-line="31" selection-end-column="108" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#416#417#0" expanded="true" />
-                <element signature="e#455#456#0" expanded="true" />
-                <element signature="e#507#508#0" expanded="true" />
-                <element signature="e#545#546#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/demoServiceData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="63" column="55" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#502#511#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/demoService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningcenter/utils/LCStudentOperImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="97" column="62" selection-start-line="97" selection-start-column="62" selection-end-line="97" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningcenter/utils/DemoServiceData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="47" column="64" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningcenter/utils/DemoService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
               <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
@@ -124,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -136,16 +125,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/LearningCenter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningcenter/LearningCenter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-              <folding>
-                <element signature="e#309#310#0" expanded="true" />
-                <element signature="e#343#344#0" expanded="true" />
-                <element signature="e#410#411#0" expanded="true" />
-                <element signature="e#456#457#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -165,6 +148,11 @@
       <find>floa</find>
       <find>for</find>
       <find>tos</find>
+      <find>avera</find>
+      <find>hrs</find>
+      <find>left</find>
+      <find>until</find>
+      <find>getD</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,11 +162,15 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/learning_center/Course.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/learning_center/utils/Student_Operations.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/learning_center/Student.java" />
@@ -194,11 +186,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/sort/SortByAvg.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/LCStudentOperations.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/LearningCenter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/LCStudentOperImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/Student.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/demoServiceData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/demoService.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/LCStudentOperImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/learningcenter/utils/demoServiceData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/learningcenter/utils/DemoServiceData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/learningcenter/utils/LCStudentOperImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/learningcenter/Student.java" />
       </list>
     </option>
   </component>
@@ -220,7 +217,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="518" />
     <option name="y" value="10" />
     <option name="width" value="1400" />
@@ -274,7 +271,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="epam" type="462c0819:PsiDirectoryNode" />
-              <item name="learningCenter" type="462c0819:PsiDirectoryNode" />
+              <item name="learningcenter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JavaBasics_Int_HW" type="b2602c69:ProjectViewProjectNode" />
@@ -283,7 +280,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="epam" type="462c0819:PsiDirectoryNode" />
-              <item name="learningCenter" type="462c0819:PsiDirectoryNode" />
+              <item name="learningcenter" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -296,6 +293,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -321,6 +319,49 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.epam.Main" />
+      <module name="JavaBasics_Int_HW" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -372,10 +413,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="518" y="10" width="1400" height="1000" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22089553" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13646056" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -385,16 +425,16 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30985916" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3298731" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.09919262" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.5135428" />
       <window_info anchor="bottom" id="SonarLint" order="10" weight="0.3298731" />
-      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.3298731" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3298731" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -495,126 +535,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaBasics_Int_HW.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/sort/SortByHrs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="54" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#219#220#0" expanded="true" />
-            <element signature="e#243#244#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/LCStudentOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="97" selection-start-line="8" selection-start-column="97" selection-end-line="8" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/sort/SortByAvg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#219#220#0" expanded="true" />
-            <element signature="e#243#244#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/Course.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/sort/SortByHrs.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/sort/SortByAvg.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningcenter/Course.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/LearningCenter.java">
+    <entry file="file://$PROJECT_DIR$/JavaBasics_Int_HW.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding>
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#343#344#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#456#457#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/LCStudentOperImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningcenter/utils/DemoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="31" column="108" selection-start-line="31" selection-start-column="108" selection-end-line="31" selection-end-column="108" />
+        <state relative-caret-position="51">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/Student.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningcenter/utils/LCStudentOperations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="113" column="36" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="36" />
+        <state relative-caret-position="136">
+          <caret line="8" column="97" selection-start-line="8" selection-start-column="97" selection-end-line="8" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningcenter/utils/DemoServiceData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="47" column="64" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
           <folding>
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#752#753#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#848#849#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#717#718#0" expanded="true" />
-            <element signature="e#765#766#0" expanded="true" />
-            <element signature="e#805#806#0" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1151#1152#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningcenter/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="119" column="109" lean-forward="true" selection-start-line="119" selection-start-column="109" selection-end-line="119" selection-end-column="109" />
+          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#2728#2729#0" expanded="true" />
             <element signature="e#2772#2773#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/demoServiceData.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningcenter/LearningCenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="55" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
+        <state relative-caret-position="119">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningcenter/utils/LCStudentOperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="97" column="62" selection-start-line="97" selection-start-column="62" selection-end-line="97" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#502#511#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/learningCenter/utils/demoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
         </state>
       </provider>
     </entry>
