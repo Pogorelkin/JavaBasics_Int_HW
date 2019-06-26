@@ -1,4 +1,4 @@
 .idea
 pom.xml
 workspace.iml
-\target\*
+*.class

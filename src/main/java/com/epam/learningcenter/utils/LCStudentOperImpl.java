@@ -31,8 +31,8 @@ public class LCStudentOperImpl {
             else { return student.getFirstName() + " is doing well(FeelsGoodMan) " ;}
     }
 
-    public List<Student> sortStudentsByHours(LinkedList<Student> studentsList) {
-        Comparator<Student> studentComparator = Comparator.comparing(Student::getHours);
+    public List<Student> sortStudentsByDays(LinkedList<Student> studentsList) {
+        Comparator<Student> studentComparator = Comparator.comparing(Student::getDaysLeft);
         studentsList.sort(studentComparator);
 
 
@@ -84,7 +84,7 @@ public class LCStudentOperImpl {
         String decision;
 
         if (student.calcAverageMark() >= 4.5) {decision = "Student can continue the learning.";}
-        else { dayBuffer = student.getHours()/8;
+        else { dayBuffer = (int) student.getDaysLeft();
             if (dayBuffer >= 1) {
                 bestPossibleAvgMark = dayBuffer * 5;
                 for (Integer mark: student.getMarks()
@@ -100,8 +100,8 @@ public class LCStudentOperImpl {
             else {decision = "Student has to be kicked(";}
         }
 
-        System.out.println(String.format("%s %s : There is %s hours until end of %s learning program. Average mark is %.2f Sentence: %s .",
-                student.getFirstName(),student.getLastName(),student.getHours(), student.getCurriculum(), student.calcAverageMark() ,decision));
+        System.out.println(String.format("%s %s : There is %s days until end of %s learning program. Average mark is %.2f Sentence: %s .",
+                student.getFirstName(),student.getLastName(),student.getDaysLeft(), student.getCurriculum(), student.calcAverageMark() ,decision));
 
 
 
