@@ -1,7 +1,6 @@
 package com.epam.calculator.utility;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,12 +49,12 @@ public class ParserImpl implements  CustomParser {
             case ('n'): return temp;
 
 
-            case ('m'): return resultNum.multiply(temp);
+            case ('m'): return resultNum.multiply(temp);// resultNum * temp;
 
 
-            case ('d'): return resultNum.divide(temp,2, RoundingMode.HALF_UP);
+            case ('d'): return  resultNum.multiply(temp); //resultNum / temp;
 
-            default:     return resultNum.multiply(temp);
+            default:     return resultNum.multiply(temp);//resultNum * temp;
 
 
         }
@@ -67,7 +66,7 @@ public class ParserImpl implements  CustomParser {
     public List<BigDecimal> parseAndMultiplyPolynomials(List<String> stringArrayList) {
         ArrayList<BigDecimal> numberArray = new ArrayList<>();
 
-        BigDecimal temp = BigDecimal.ONE;
+        BigDecimal temp = BigDecimal.ZERO;
         BigDecimal mult = BigDecimal.ONE;
         BigDecimal resultBD = BigDecimal.ONE;
         String string = "";
@@ -76,16 +75,19 @@ public class ParserImpl implements  CustomParser {
 
             for (Character character : str.toCharArray()) {
                 switch (character) {
-                    case ('-'): mult = mult.multiply(new BigDecimal(-1));
-                        break;
-                    case ('*'): temp = BigDecimal.valueOf(Float.parseFloat(string));
+                    case ('-'):  mult = mult.multiply(new BigDecimal(-1));
+                    break;
+
+                    case ('*'): temp =  new BigDecimal(string);
                         resultBD = calcByFlag(flagMult,temp ,resultBD);
                         flagMult = 'm';
+                        string = "";
                         break;
 
-                    case ('/'): temp  = BigDecimal.valueOf(Float.parseFloat(string));
+                    case ('/'): temp = new BigDecimal(string);
                         resultBD = calcByFlag(flagMult,temp ,resultBD);
                         flagMult = 'd';
+                        string = "";
                         break;
 
                     default:
@@ -93,10 +95,9 @@ public class ParserImpl implements  CustomParser {
                         break;
                 }
 
-                string = "0";
 
             }
-
+            string = "";
             resultBD = calcByFlag(flagMult, temp, resultBD);
             numberArray.add(resultBD);
         }

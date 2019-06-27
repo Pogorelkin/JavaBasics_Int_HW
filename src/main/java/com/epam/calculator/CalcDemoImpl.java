@@ -15,14 +15,13 @@ public class CalcDemoImpl implements CalcDemo {
         String input;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a string");
-        input = scanner.nextLine();
-        System.out.println("\ninput");
+        input = scanner.nextLine(); //
 
-        List<BigDecimal> bigDecimalArrayList;
-         bigDecimalArrayList = parser.parseAndMultiplyPolynomials(parser.parseStringToPolynom(input));
+        List<BigDecimal> bigDecimalsList;
+        bigDecimalsList = parser.parseAndMultiplyPolynomials(parser.parseStringToPolynom(input));
 
-         BigDecimal sum = BigDecimal.ZERO;
-        for (BigDecimal element: bigDecimalArrayList) {
+        BigDecimal sum = BigDecimal.ZERO;
+        for (BigDecimal element: bigDecimalsList) {
             sum = sum.add(element);
 
         }
