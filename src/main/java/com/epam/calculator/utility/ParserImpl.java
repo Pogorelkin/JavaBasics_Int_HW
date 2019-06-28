@@ -73,6 +73,7 @@ public class ParserImpl implements  CustomParser {
         Character flagMult = 'n';
         for (String str : stringArrayList) {
 
+            mult = BigDecimal.ONE;
             for (Character character : str.toCharArray()) {
                 switch (character) {
                     case ('-'):  mult = mult.multiply(new BigDecimal(-1));
@@ -92,17 +93,49 @@ public class ParserImpl implements  CustomParser {
 
                     default:
                         string = string.concat(character.toString());
+
+
                         break;
                 }
+                if (string.isEmpty() != true) {temp = new BigDecimal(Double.parseDouble(string));}
 
 
             }
-            string = "";
+
             resultBD = calcByFlag(flagMult, temp, resultBD);
+            resultBD = resultBD.multiply(mult);
             numberArray.add(resultBD);
+            string = "";
+            resultBD = BigDecimal.ONE;
         }
 
 
         return numberArray;
+    }
+
+    @Override
+    public void validateString(String string) {
+        String s;
+        for (Character character: string.toCharArray()) {
+            s = "";
+            s = s.concat(character.toString());
+
+           // if ( Character.isDigit(s) == true){
+              switch (character){
+               // case ((char) Character.getNumericValue(character) ) : {break;} //number
+                case ('+'):{break;} //+
+                case ('-'):{break;} //
+                case ('.'):{break;} //
+                case ('/'):{break;} //
+                case ('*'):{break;} //
+                default: {
+                    System.out.println("Invalid string, please input expression according to pattern.");
+                    System.exit(0);
+                }
+             // }
+            }
+
+
+        }
     }
 }
