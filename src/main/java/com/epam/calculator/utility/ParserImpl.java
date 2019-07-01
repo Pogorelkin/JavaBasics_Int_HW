@@ -49,12 +49,12 @@ public class ParserImpl implements  CustomParser {
             case ('n'): return temp;
 
 
-            case ('m'): return resultNum.multiply(temp);// resultNum * temp;
+            case ('m'): return resultNum.multiply(temp);
 
 
-            case ('d'): return  resultNum.multiply(temp); //resultNum / temp;
+            case ('d'): return  resultNum.multiply(temp);
 
-            default:     return resultNum.multiply(temp);//resultNum * temp;
+            default:     return resultNum.multiply(temp);
 
 
         }
@@ -67,7 +67,7 @@ public class ParserImpl implements  CustomParser {
         ArrayList<BigDecimal> numberArray = new ArrayList<>();
 
         BigDecimal temp = BigDecimal.ZERO;
-        BigDecimal mult = BigDecimal.ONE;
+        BigDecimal mult;
         BigDecimal resultBD = BigDecimal.ONE;
         String string = "";
         Character flagMult = 'n';
@@ -97,7 +97,7 @@ public class ParserImpl implements  CustomParser {
 
                         break;
                 }
-                if (string.isEmpty() != true) {temp = new BigDecimal(Double.parseDouble(string));}
+                if (!string.isEmpty()) {temp = BigDecimal.valueOf(Double.parseDouble(string));}
 
 
             }
@@ -118,7 +118,7 @@ public class ParserImpl implements  CustomParser {
         String s;
         for (Character character: string.toCharArray()) {
             s = "";
-            s = s.concat(character.toString());
+            //s = s.concat(character.toString());
 
            // if ( Character.isDigit(s) == true){
               switch (character){
@@ -132,7 +132,7 @@ public class ParserImpl implements  CustomParser {
                     System.out.println("Invalid string, please input expression according to pattern.");
                     System.exit(0);
                 }
-             // }
+
             }
 
 
