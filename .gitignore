@@ -2,4 +2,5 @@
 pom.xml
 workspace.iml
 *.class
-\out\*
+out\*
+.idea/*
