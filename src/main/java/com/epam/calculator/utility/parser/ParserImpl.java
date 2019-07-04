@@ -1,4 +1,7 @@
-package com.epam.calculator.utility;
+package com.epam.calculator.utility.parser;
+
+import com.epam.calculator.enums.FlagMultiplication;
+import com.epam.calculator.utility.services.Calculator;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -6,27 +9,28 @@ import java.util.List;
 
 public class ParserImpl implements  CustomParser {
 
+    final char add = '+';
+    final char subtract = '-';
+    final  char multiply = '*';
+    final char divide = '/';
+
 
     @Override
     public List<String> parseStringToPolynom(String string) //ArrayList<String>
     {
         ArrayList<String> parsedList = new ArrayList<>();
-        int multiplier = 0;
         String productionStr = "";
-        final char plus = '+';
-        final char minus = '-';
+
 
         for (Character character : string.toCharArray()) {
             switch (character) {
-                case (plus):
+                case (add):
                     parsedList.add(productionStr);
-                    multiplier = 1;
                     productionStr = "";
                     break;
 
-                case (minus):
+                case (subtract):
                     parsedList.add(productionStr);
-                    multiplier = -1;
                     productionStr = "-";
                     break;
 
@@ -43,23 +47,6 @@ public class ParserImpl implements  CustomParser {
         return parsedList;
     }
 
-    @Override
-     public BigDecimal calcByFlag(Character flag, BigDecimal  temp , BigDecimal resultNum  ) {
-        switch (flag){
-            case ('n'): return temp;
-
-
-            case ('m'): return resultNum.multiply(temp);
-
-
-            case ('d'): return  resultNum.multiply(temp);
-
-            default:     return resultNum.multiply(temp);
-
-
-        }
-    }
-
 
 
     @Override
@@ -70,24 +57,25 @@ public class ParserImpl implements  CustomParser {
         BigDecimal mult;
         BigDecimal resultBD = BigDecimal.ONE;
         String string = "";
-        Character flagMult = 'n';
+        Character flagMult = FlagMultiplication.NOTHING.getCharacter();
+        Calculator calculator = new Calculator();
         for (String str : stringArrayList) {
 
             mult = BigDecimal.ONE;
             for (Character character : str.toCharArray()) {
                 switch (character) {
-                    case ('-'):  mult = mult.multiply(new BigDecimal(-1));
+                    case (subtract) :  mult = mult.multiply(new BigDecimal(-1));
                     break;
 
-                    case ('*'): temp =  new BigDecimal(string);
-                        resultBD = calcByFlag(flagMult,temp ,resultBD);
-                        flagMult = 'm';
+                    case (multiply): temp =  new BigDecimal(string);
+                        resultBD = calculator.calcByFlag(flagMult,temp ,resultBD);
+                        flagMult = FlagMultiplication.MULTIPLICATION.getCharacter();
                         string = "";
                         break;
 
-                    case ('/'): temp = new BigDecimal(string);
-                        resultBD = calcByFlag(flagMult,temp ,resultBD);
-                        flagMult = 'd';
+                    case (divide): temp = new BigDecimal(string);
+                        resultBD = calculator.calcByFlag(flagMult,temp ,resultBD);
+                        flagMult = FlagMultiplication.DIVIDE.getCharacter();
                         string = "";
                         break;
 
@@ -102,7 +90,7 @@ public class ParserImpl implements  CustomParser {
 
             }
 
-            resultBD = calcByFlag(flagMult, temp, resultBD);
+            resultBD = calculator.calcByFlag(flagMult, temp, resultBD);
             resultBD = resultBD.multiply(mult);
             numberArray.add(resultBD);
             string = "";
@@ -113,29 +101,6 @@ public class ParserImpl implements  CustomParser {
         return numberArray;
     }
 
-    @Override
-    public void validateString(String string) {
-        String s;
-        for (Character character: string.toCharArray()) {
-            s = "";
-            //s = s.concat(character.toString());
+    //@Override
 
-           // if ( Character.isDigit(s) == true){
-              switch (character){
-               // case ((char) Character.getNumericValue(character) ) : {break;} //number
-                case ('+'):{break;} //+
-                case ('-'):{break;} //
-                case ('.'):{break;} //
-                case ('/'):{break;} //
-                case ('*'):{break;} //
-                default: {
-                    System.out.println("Invalid string, please input expression according to pattern.");
-                    System.exit(0);
-                }
-
-            }
-
-
-        }
-    }
 }

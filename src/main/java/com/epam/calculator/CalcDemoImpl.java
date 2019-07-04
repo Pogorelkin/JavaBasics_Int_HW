@@ -1,23 +1,36 @@
 package com.epam.calculator;
 
-import com.epam.calculator.utility.CustomParser;
-import com.epam.calculator.utility.ParserImpl;
+import com.epam.calculator.utility.parser.CustomParser;
+import com.epam.calculator.utility.parser.ParserImpl;
+import com.epam.calculator.utility.services.Validator;
 
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class CalcDemoImpl implements CalcDemo {
+
+    private static final Logger LOGGER = Logger.getLogger(CalcDemoImpl.class.getName());
+
     @Override
     public void startDemo() {
         CustomParser parser = new ParserImpl();
+        Validator validator = new Validator();
 
         String input;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a string");
+        LOGGER.log(Level.INFO, "Hello, Enter a string ");
+        LOGGER.log(Level.INFO, "Allowed characters: '0..9' numbers , '.' dot '+' add , '-' subtract, '*' multiply, '/' divide");
+
+
         input = scanner.nextLine(); //
 
-        parser.validateString(input);
+         if (!validator.validateString(input)) {
+             LOGGER.log(Level.INFO, "Not valid string, use allowed characters");
+             System.exit(-1);
+         }
 
         List<BigDecimal> bigDecimalsList;
         bigDecimalsList = parser.parseAndMultiplyPolynomials(parser.parseStringToPolynom(input));
@@ -28,11 +41,9 @@ public class CalcDemoImpl implements CalcDemo {
 
         }
 
-        System.out.println("Hello. Please, enter string you want to calculate.");
-        System.out.println("Allowed characters: '0..9' numbers , '.' dot '+' add , '-' subtract, '*' multiply, '/' divide");
-        System.out.println("Input = " + input);
-        System.out.println(String.format("Result = %.5f",sum));
-       //System.out.println(new BigDecimal(2).add(new BigDecimal(1)));
+        LOGGER.log(Level.INFO, String.format("Result = %.5f",sum) );
+
+
 
 
 
