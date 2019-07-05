@@ -38,7 +38,3 @@ _
 /src/main/java/com/epam/calculator/CalcDemo.java,1\c\1c6bc8a213379f1d367e3b08ac3e093d9ff63919
 c
 3src/main/java/com/epam/calculator/CalcDemoImpl.java,2\4\244034d5e0ea48a038cdced51bf59ef79355d245
-k
-;src/main/java/com/epam/calculator/utility/CustomParser.java,6\8\685c0ea4326aca81acfaeab5c1df5e690cfbb9c1
-i
-9src/main/java/com/epam/calculator/utility/ParserImpl.java,0\b\0b7e64171ebbb2e6c1f4271d1e5decff5f9061a4

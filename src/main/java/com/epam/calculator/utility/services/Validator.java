@@ -4,6 +4,7 @@ public class Validator {
     private boolean checkIfCharacterIsOperation(Character character) {
         boolean flag = false;
         switch (character) {
+            case (' '):
             case ('+'):
             case ('-'):
             case ('.'):

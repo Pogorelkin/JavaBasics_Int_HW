@@ -7,12 +7,12 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ParserImpl implements  CustomParser {
+public class ParserImpl implements CustomParser {
 
-    final char add = '+';
-    final char subtract = '-';
-    final  char multiply = '*';
-    final char divide = '/';
+    private final char subtract = '-';
+    private final char multiply = '*';
+    private final char divide = '/';
+    private final char add = '+';
 
 
     @Override
@@ -23,7 +23,10 @@ public class ParserImpl implements  CustomParser {
 
 
         for (Character character : string.toCharArray()) {
+
             switch (character) {
+                case (' '):
+                    break;
                 case (add):
                     parsedList.add(productionStr);
                     productionStr = "";
@@ -40,13 +43,11 @@ public class ParserImpl implements  CustomParser {
             }
 
 
-
         }
         parsedList.add(productionStr);
 
         return parsedList;
     }
-
 
 
     @Override
@@ -64,17 +65,20 @@ public class ParserImpl implements  CustomParser {
             mult = BigDecimal.ONE;
             for (Character character : str.toCharArray()) {
                 switch (character) {
-                    case (subtract) :  mult = mult.multiply(new BigDecimal(-1));
-                    break;
+                    case (subtract):
+                        mult = mult.multiply(new BigDecimal(-1));
+                        break;
 
-                    case (multiply): temp =  new BigDecimal(string);
-                        resultBD = calculator.calcByFlag(flagMult,temp ,resultBD);
+                    case (multiply):
+                        temp = new BigDecimal(string);
+                        resultBD = calculator.calcByFlag(flagMult, temp, resultBD);
                         flagMult = FlagMultiplication.MULTIPLICATION.getCharacter();
                         string = "";
                         break;
 
-                    case (divide): temp = new BigDecimal(string);
-                        resultBD = calculator.calcByFlag(flagMult,temp ,resultBD);
+                    case (divide):
+                        temp = new BigDecimal(string);
+                        resultBD = calculator.calcByFlag(flagMult, temp, resultBD);
                         flagMult = FlagMultiplication.DIVIDE.getCharacter();
                         string = "";
                         break;
@@ -85,7 +89,9 @@ public class ParserImpl implements  CustomParser {
 
                         break;
                 }
-                if (!string.isEmpty()) {temp = BigDecimal.valueOf(Double.parseDouble(string));}
+                if (!string.isEmpty()) {
+                    temp = BigDecimal.valueOf(Double.parseDouble(string));
+                }
 
 
             }
