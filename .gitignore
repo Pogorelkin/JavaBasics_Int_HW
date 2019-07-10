@@ -4,3 +4,7 @@ workspace.iml
 out/*
 .idea/*
 target/
+
+\.idea/
+
+*.iml
