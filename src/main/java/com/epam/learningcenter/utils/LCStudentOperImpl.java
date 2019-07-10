@@ -11,15 +11,20 @@ import java.util.List;
 
 public class LCStudentOperImpl {
 
+    private Student student;
+    private LearningCenter learningCenter;
+
     public LCStudentOperImpl() {
 
     }
 
 
     public LCStudentOperImpl(Student student) {
+        this.student = student;
     }
 
     public LCStudentOperImpl(LearningCenter learningCenter) {
+        this.learningCenter = learningCenter;
     }
 
 
@@ -34,19 +39,13 @@ public class LCStudentOperImpl {
     public List<Student> sortStudentsByDays(LinkedList<Student> studentsList) {
         Comparator<Student> studentComparator = Comparator.comparing(Student::getDaysLeft);
         studentsList.sort(studentComparator);
-
-
         return studentsList;
-
     }
 
 
     public List<Student> sortStudentsByAverage(LinkedList<Student> studentsList) {
-
         Comparator<Student> studentComparator = Comparator.comparing(obj -> obj.calcAverageMark());
         Collections.sort(studentsList,studentComparator);
-
-
         return studentsList;
     }
 
@@ -62,9 +61,7 @@ public class LCStudentOperImpl {
              else { dayBuffer = student.getHours()/8;
                  if (dayBuffer >= 1) {
                      bestPossibleAvgMark = dayBuffer * 5;
-                     for (Integer mark: student.getMarks()
-                          ) {
-
+                     for (Integer mark: student.getMarks()) {
                          bestPossibleAvgMark += mark;
                          dayBuffer++;
                      }
@@ -73,23 +70,19 @@ public class LCStudentOperImpl {
                  }
             }
         }
-
         return studentList;
-
     }
 
     public void printStudentWithDecision(Student student){
         Integer bestPossibleAvgMark = 0;
         Integer dayBuffer = 0;
         String decision;
-
         if (student.calcAverageMark() >= 4.5) {decision = "Student can continue the learning.";}
         else { dayBuffer = (int) student.getDaysLeft();
             if (dayBuffer >= 1) {
                 bestPossibleAvgMark = dayBuffer * 5;
                 for (Integer mark: student.getMarks()
                 ) {
-
                     bestPossibleAvgMark += mark;
                     dayBuffer++;  //buffer marks + these that student has at the moment
                 }
@@ -99,13 +92,7 @@ public class LCStudentOperImpl {
             }
             else {decision = "Student has to be kicked(";}
         }
-
         System.out.println(String.format("%s %s : There is %s days until end of %s learning program. Average mark is %.2f Sentence: %s .",
                 student.getFirstName(),student.getLastName(),student.getDaysLeft(), student.getCurriculum(), student.calcAverageMark() ,decision));
-
-
-
     }
-
-
 }

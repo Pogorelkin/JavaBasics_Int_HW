@@ -108,8 +108,6 @@ public class Student {
             if (mark != 0)
                 hrs-=8;
         }
-
-
         return hrs;
     }
 
@@ -118,17 +116,12 @@ public class Student {
         for (Course obj : this.getCourses()) {
             hrs += obj.getHourAmount();
         }
-
-
         return hrs%8 == 0 ? hrs/8 : hrs/8+1;
     }
 
     public long getDaysLeft() {
        Long daysDifference = DAYS.between(start_date,LocalDateTime.now());
-
-
         return daysDifference <= (getCourcesDurationInDays()) ? (getCourcesDurationInDays()-daysDifference) : 0;
-
     }
 
     public double calcAverageMark() {
@@ -139,7 +132,6 @@ public class Student {
             sum += mark;
             marksAmount++;
         }
-
         return sum.doubleValue() / marksAmount.doubleValue();
     }
 
