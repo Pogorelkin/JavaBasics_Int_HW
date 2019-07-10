@@ -21,7 +21,6 @@ public class CalculatorUtilityTest {
 
     @Test
     public void testCalcByFlagMultiplicationBigDecimal_21Mult42In_882Out() {
-
         flag = 'm';
         BigDecimal expected = new BigDecimal(882);
         try {
@@ -30,15 +29,12 @@ public class CalculatorUtilityTest {
         } catch (CalculationException e) {
             logger.info(e.getMessage());
         }
-
     }
 
     @Test
     public void testCalcByFlagDivisionBigDecimal_42Div21In_2Out() {
-
         flag = 'd';
         BigDecimal expected = new BigDecimal(2);
-
         try {
             actual = calculator.calcByFlag(flag, number1, number2);
             assertThat(actual, Matchers.comparesEqualTo(expected));

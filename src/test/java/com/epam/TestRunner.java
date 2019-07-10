@@ -8,7 +8,4 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({CalculatorUtilityTest.class, ParserUtilityTest.class})
 public class TestRunner {
-
-
-
 }

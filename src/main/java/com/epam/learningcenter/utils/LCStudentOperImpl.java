@@ -15,9 +15,7 @@ public class LCStudentOperImpl {
     private LearningCenter learningCenter;
 
     public LCStudentOperImpl() {
-
     }
-
 
     public LCStudentOperImpl(Student student) {
         this.student = student;
@@ -26,9 +24,6 @@ public class LCStudentOperImpl {
     public LCStudentOperImpl(LearningCenter learningCenter) {
         this.learningCenter = learningCenter;
     }
-
-
-
 
     public String calcExpulsionPossibility(Student student) {
         if (student.calcAverageMark() <= 4.5 ){ return student.getFirstName() + " is doing bad (FeelsBadMan). " +
