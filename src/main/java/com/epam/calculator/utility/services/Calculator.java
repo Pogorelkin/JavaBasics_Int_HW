@@ -6,7 +6,6 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class Calculator {
-
     public BigDecimal calcByFlag(Character flag, BigDecimal temp, BigDecimal resultNum) throws CalculationException {
         switch (flag) {
             case ('n'):
@@ -21,11 +20,8 @@ public class Calculator {
                 }
                 return resultNum.divide(temp, 3, RoundingMode.CEILING);
             }
-
             default:
                 return resultNum.multiply(temp);
-
-
         }
     }
 }
