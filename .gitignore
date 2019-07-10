@@ -1,6 +1,7 @@
 pom.xml
-workspace.iml
+.iml
 *.class
-out/*
-.idea/*
+out/
+
 target/
+.idea/
