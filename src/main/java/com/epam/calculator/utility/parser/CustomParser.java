@@ -5,9 +5,9 @@ import java.util.List;
 
 public interface CustomParser {
 
-      List<String> parseStringToPolynom(String string);
+    List<String> parseStringToPolynom(String string);
 
-       List<BigDecimal> parseAndMultiplyPolynomials(List<String> stringList);
+    List<BigDecimal> parseAndMultiplyPolynomials(List<String> stringList);
 
 
 }

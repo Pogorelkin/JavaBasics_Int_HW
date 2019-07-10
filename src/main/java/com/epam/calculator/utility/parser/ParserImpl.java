@@ -2,6 +2,9 @@ package com.epam.calculator.utility.parser;
 
 import com.epam.calculator.enums.FlagMultiplication;
 import com.epam.calculator.utility.services.Calculator;
+import com.epam.exceptions.CalculationException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -9,16 +12,17 @@ import java.util.List;
 
 public class ParserImpl implements CustomParser {
 
+
+    Logger logger = LoggerFactory.getLogger(ParserImpl.class);
     private final char subtract = '-';
     private final char multiply = '*';
     private final char divide = '/';
     private final char add = '+';
 
-
     @Override
-    public List<String> parseStringToPolynom(String string) //ArrayList<String>
+    public List<String> parseStringToPolynom(String string)
     {
-        ArrayList<String> parsedList = new ArrayList<>();
+        List<String> parsedList = new ArrayList<>();
         String productionStr = "";
 
 
@@ -41,18 +45,15 @@ public class ParserImpl implements CustomParser {
                     productionStr = productionStr.concat(character.toString());
                     break;
             }
-
-
         }
         parsedList.add(productionStr);
 
         return parsedList;
     }
 
-
     @Override
     public List<BigDecimal> parseAndMultiplyPolynomials(List<String> stringArrayList) {
-        ArrayList<BigDecimal> numberArray = new ArrayList<>();
+        List<BigDecimal> numberArray = new ArrayList<>();
 
         BigDecimal temp = BigDecimal.ZERO;
         BigDecimal mult;
@@ -71,14 +72,22 @@ public class ParserImpl implements CustomParser {
 
                     case (multiply):
                         temp = new BigDecimal(string);
-                        resultBD = calculator.calcByFlag(flagMult, temp, resultBD);
+                        try {
+                            resultBD = calculator.calcByFlag(flagMult, temp, resultBD);
+                        } catch (CalculationException e) {
+                            logger.info(e.getMessage());
+                        }
                         flagMult = FlagMultiplication.MULTIPLICATION.getCharacter();
                         string = "";
                         break;
 
                     case (divide):
                         temp = new BigDecimal(string);
-                        resultBD = calculator.calcByFlag(flagMult, temp, resultBD);
+                        try {
+                            resultBD = calculator.calcByFlag(flagMult, temp, resultBD);
+                        } catch (CalculationException e) {
+                            logger.info(e.getMessage());
+                        }
                         flagMult = FlagMultiplication.DIVIDE.getCharacter();
                         string = "";
                         break;
@@ -92,21 +101,17 @@ public class ParserImpl implements CustomParser {
                 if (!string.isEmpty()) {
                     temp = BigDecimal.valueOf(Double.parseDouble(string));
                 }
-
-
             }
-
-            resultBD = calculator.calcByFlag(flagMult, temp, resultBD);
+            try {
+                resultBD = calculator.calcByFlag(flagMult, temp, resultBD);
+            } catch (CalculationException e) {
+                logger.info(e.getMessage());
+            }
             resultBD = resultBD.multiply(mult);
             numberArray.add(resultBD);
             string = "";
             resultBD = BigDecimal.ONE;
         }
-
-
         return numberArray;
     }
-
-    //@Override
-
 }

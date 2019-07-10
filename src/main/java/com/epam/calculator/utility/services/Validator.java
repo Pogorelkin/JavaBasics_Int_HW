@@ -15,24 +15,15 @@ public class Validator {
             }
             default:
                 break;
-
-
         }
-
-
         return flag;
     }
-
 
     public boolean validateString(String string) {
         boolean flag = false;
         for (Character character : string.toCharArray()) {
-                flag = checkIfCharacterIsOperation(character);
-                if (!flag) flag = Character.isDigit(character);
-
-
-
-
+            flag = checkIfCharacterIsOperation(character);
+            if (!flag) flag = Character.isDigit(character);
         }
         return flag;
     }
