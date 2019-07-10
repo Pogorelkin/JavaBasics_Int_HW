@@ -3,7 +3,6 @@ package com.epam.calculator;
 import com.epam.calculator.utility.services.Calculator;
 import com.epam.exceptions.CalculationException;
 import org.hamcrest.Matchers;
-import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,13 +19,6 @@ public class CalculatorUtilityTest {
     BigDecimal actual = new BigDecimal(0);
     Calculator calculator = new Calculator();
 
-
-
-    @Before
-    public void setUp() {
-
-    }
-
     @Test
     public void testCalcByFlagMultiplicationBigDecimal_21Mult42In_882Out() {
 
@@ -38,9 +30,6 @@ public class CalculatorUtilityTest {
         } catch (CalculationException e) {
             logger.info(e.getMessage());
         }
-
-
-
 
     }
 
@@ -56,7 +45,5 @@ public class CalculatorUtilityTest {
         } catch (CalculationException e) {
             logger.info(e.getMessage());
         }
-
-
     }
 }

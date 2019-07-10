@@ -1,6 +1,6 @@
 package com.epam.exceptions;
 
-public class CalculationException extends Exception {
+public class CalculationException extends RuntimeException {
     public CalculationException(String message) {
         super(message);
     }

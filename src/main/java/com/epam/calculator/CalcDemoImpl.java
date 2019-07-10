@@ -5,7 +5,6 @@ import com.epam.calculator.utility.parser.ParserImpl;
 import com.epam.calculator.utility.services.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Scanner;
@@ -15,18 +14,15 @@ public class CalcDemoImpl implements CalcDemo {
 
     private Logger logger = LoggerFactory.getLogger(CalcDemoImpl.class);
 
-
     @Override
     public void startDemo() {
         CustomParser parser = new ParserImpl();
         Validator validator = new Validator();
-
         String input;
         Scanner scanner = new Scanner(System.in);
 
         logger.info("Hello, Enter a string ");
         logger.info("Allowed characters: '0..9' numbers , '.' dot '+' add , '-' subtract, '*' multiply, '/' divide");
-
 
         input = scanner.nextLine(); //
 
@@ -45,7 +41,5 @@ public class CalcDemoImpl implements CalcDemo {
         }
 
         logger.info(String.format("Result = %.5f", sum));
-
-
     }
 }

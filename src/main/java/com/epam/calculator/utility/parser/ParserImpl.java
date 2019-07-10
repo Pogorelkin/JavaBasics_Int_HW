@@ -25,7 +25,6 @@ public class ParserImpl implements CustomParser {
         List<String> parsedList = new ArrayList<>();
         String productionStr = "";
 
-
         for (Character character : string.toCharArray()) {
 
             switch (character) {
@@ -94,8 +93,6 @@ public class ParserImpl implements CustomParser {
 
                     default:
                         string = string.concat(character.toString());
-
-
                         break;
                 }
                 if (!string.isEmpty()) {

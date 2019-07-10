@@ -11,8 +11,6 @@ import java.util.LinkedList;
 
 public class DemoServiceData implements DemoService {
 
-
-
     @Override
     public void startDemo() {
         LCStudentOperImpl operations = new LCStudentOperImpl();
@@ -28,7 +26,6 @@ public class DemoServiceData implements DemoService {
         learningCenter.addStudent(new Student("Ivan", "Ivanov", "J2EE Developer", marks, courses, LocalDate.parse("26/06/2019", formatter)));
 
 
-        //input Petrov Petr
         marks = new LinkedList<>(Arrays.asList(4,5,3,2,3,3,5,5));
         courses = new LinkedList<>(Arrays.asList(new Course("Java technologies review", 8),
                 new Course("JFC/Swing library", 16),
@@ -37,7 +34,6 @@ public class DemoServiceData implements DemoService {
                 new Course("Common libraries", 44)));
         learningCenter.addStudent(new Student("Petr", "Petrov", "Java Developer", marks, courses, LocalDate.parse("20/06/2019", formatter)));
 
-        //input Dmitry Dmitriev
         marks = new LinkedList<>(Arrays.asList(4,5,5,5));
         courses = new LinkedList<>(Arrays.asList(new Course("Some course1 ", 8),
                 new Course("Some course2", 8),
